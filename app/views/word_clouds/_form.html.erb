@@ -1,0 +1,17 @@
+<%= form_with(model: word_cloud, local: true) do |form| %>
+  <% if word_cloud.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(word_cloud.errors.count, "error") %> prohibited this word_cloud from being saved:</h2>
+
+      <ul>
+      <% word_cloud.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

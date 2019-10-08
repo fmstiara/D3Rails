@@ -1,0 +1,2 @@
+class WordCloud < ApplicationRecord
+end
